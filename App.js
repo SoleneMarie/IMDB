@@ -18,7 +18,7 @@ export default function App() {
         style={{
           paddingTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
           backgroundColor: "black",
-          flex: "1",
+          flex: 1,
         }}
       ></View>
     </SafeAreaView>
