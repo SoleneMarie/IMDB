@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import {
+  ActivityIndicator,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+  SafeAreaView,
+  Platform,
+} from "react-native";
+import Constants from "expo-constants";
+import IMDB from "./assets/logo-imdb.png";
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <View
+        style={{
+          paddingTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
+          backgroundColor: "black",
+          flex: "1",
+        }}
+      ></View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  logoStyle: {
+    width: 60,
+    height: 40,
   },
 });
